@@ -1,8 +1,12 @@
 import React from 'react'
+import ContentWrapper from '../../components/contentwrapper/ContentWrapper'
+import Teams from '../../components/team/Team'
 
 const About = () => {
     return (
-        <div>About</div>
+        <ContentWrapper>
+            <Teams />
+        </ContentWrapper>
     )
 }
 
