@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary: #ffffff;
+  --secondary: #8a5ffd;
+  --txt-color: rgb(12, 12, 12);
+  --accent: #6805c4;
+  --grad1: var(--blue-accent);
+  --grad2: var(--green-accent);
+  --gradient: linear-gradient(to right, var(--grad1), var(--grad2));;
+  --bg-color: var(--primary);
+  --blue-firefly: #0E2133;
+  --blue-accent: #008793;
+  --green-accent: #00bf72;
+
+  --fz-xxl: 90px;
+  --fz-xl: 50px;
+  --fz-lg: 24px;
+  --fz-md: 18px;
+  --fz-sm: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a2955;
+  &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+          90deg,
+          rgba(#193763, 0) 0,
+          rgba(#193763, 0.2) 20%,
+          rgba(#193763, 0.5) 60%,
+          rgba(#193763, 0)
+      );
+      animation: shimmer 2s infinite;
+      content: "";
+  }
+
+  @keyframes shimmer {
+      100% {
+          transform: translateX(100%);
+      }
+  }
+}

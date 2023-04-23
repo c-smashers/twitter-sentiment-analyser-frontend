@@ -1,0 +1,121 @@
+@import '../../mixins.scss';
+
+.header {
+    position: fixed;
+    transform: translateY(0);
+    width:100%;
+    height:80px;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    transition:all ease 0.5s;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Inter,sans-serif;
+    &.top{
+        z-index: 2;
+        position: relative;
+        background-image: linear-gradient(to bottom,rgb(221, 183, 247),rgb(238, 223, 247),transparent);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+    &.show{
+        background-color: var(--primary);
+    }
+    &.hide{
+        transform:translateY(-80px);
+    }
+
+    .contentWrapper{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        cursor:pointer;
+        color: #8d1df7;
+        font-weight: 600;
+        img{
+            height:50px;
+        }
+    }
+    .menuItems{
+        list-style-type:none;
+        display:none;
+        align-items: center;
+        @include md{
+            display: flex;
+        }
+        .menuItem{
+            height: 60px;
+            display: flex;
+            align-items:center;
+            margin:0 15px;
+            color:#8d1df7;
+            font-weight:600;
+            position:relative;
+            cursor:pointer;
+            &.searchIcon{
+                margin-right:0;
+            }
+            svg{
+                font-size: 18px;
+            }
+            &:hover{
+                color: var(--accent);
+            }
+        }
+    }
+
+    .mobileMenuItems {
+        display:flex;
+        align-items: center;
+        gap:20px;
+        @include md {
+            display: none;
+        }
+        svg{
+            font-size: 18px;
+            color:var(--txt-color);
+        }
+    }
+
+    &.mobileView{
+        background-color: var(--bg-color);
+        .menuItems{
+            display:flex;
+            position:absolute;
+            top:60px;
+            left:0;
+            background:var(--bg-color);
+            flex-direction:column;
+            width:100%;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,25,0.1);
+            animation: mobileMenu 0.3s ease forwards;
+            .menuItem{
+                font-size: 28px;
+                width:100%;
+                height: auto;
+                padding:15px 20px;
+                margin:0;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                &:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes mobileMenu {
+    0%{
+        transform: translateY(-130%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
