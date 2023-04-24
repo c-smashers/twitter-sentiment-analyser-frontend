@@ -62,7 +62,7 @@ const Header = () => {
     const navigationHandler = (type) => {
         if (type === "about") {
             navigate("/about")
-        } if (type === "youtube-comment-sentiment-analyser") {
+        } else if (type === "youtube-comment-sentiment-analyser") {
             navigate("/youtube-comment-sentiment-analyser")
         }
         else {

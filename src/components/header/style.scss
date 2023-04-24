@@ -15,12 +15,13 @@
     &.top{
         z-index: 2;
         position: relative;
-        background-image: linear-gradient(to bottom,rgb(221, 183, 247),rgb(238, 223, 247),transparent);
+        background-color:rgb(139, 92, 246);
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
     }
     &.show{
-        background-color: var(--primary);
+        margin-top:-36px;
+        background-color:rgba(139, 92, 246,0.8);
     }
     &.hide{
         transform:translateY(-80px);
@@ -33,7 +34,7 @@
     }
     .logo{
         cursor:pointer;
-        color: #8d1df7;
+        color: rgb(250, 237, 237);
         font-weight: 600;
         img{
             height:50px;
@@ -51,9 +52,10 @@
             display: flex;
             align-items:center;
             margin:0 15px;
-            color:#8d1df7;
+            color:rgb(250, 237, 237);
             font-weight:600;
             position:relative;
+            padding: 0 5px;
             cursor:pointer;
             &.searchIcon{
                 margin-right:0;
@@ -62,8 +64,11 @@
                 font-size: 18px;
             }
             &:hover{
-                color: var(--accent);
-            }
+                color: rgb(139, 92, 246);
+                height: 40px;
+                background-color: #fff;
+                border-radius: 5px;
+            } 
         }
     }
 
@@ -75,19 +80,19 @@
             display: none;
         }
         svg{
-            font-size: 18px;
-            color:var(--txt-color);
+            font-size: 20px;
+            color:#fff;
         }
     }
 
     &.mobileView{
-        background-color: var(--bg-color);
+        background-color: rgb(139, 92, 246);
         .menuItems{
             display:flex;
             position:absolute;
             top:60px;
             left:0;
-            background:var(--bg-color);
+            background:rgb(139, 92, 246);
             flex-direction:column;
             width:100%;
             padding: 20px 0;
@@ -104,6 +109,11 @@
                 align-items: flex-start;
                 &:last-child{
                     display: none;
+                }
+                &:hover{
+                    color: var(--accent);
+                    background-color: #fff;
+                    transition: 400ms;
                 }
             }
         }
