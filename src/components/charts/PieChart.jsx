@@ -5,12 +5,12 @@ import { Pie } from 'react-chartjs-2'
 ChartJS.register(ArcElement, Tooltip, Legend);
 const PieChart = (props) => {
     const data = {
-        labels: ['Negative', 'Neutral', 'Positive', 'Other'],
+        labels: ['Negative', 'Neutral', 'Partially Positive', 'Positive'],
         datasets: [
             {
                 label: 'Sentiments (%)',
                 data: props.data,
-                backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)', 'rgba(41, 253, 100,0.7)', 'rgba(209, 208, 205,0.7)'],
+                backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(34, 245, 140,0.6)', 'rgba(39, 245, 73,0.6)'],
             }
         ]
     }
