@@ -45,7 +45,8 @@ const YoutubeCommentAnalyser = () => {
             <h3 className="mb-4 my-8 text-4xl font-extrabold leading-none tracking-tight text-violet-900 md:text-4xl lg:text-5xl ">You<span className="text-red-500">Tube</span> Comment <span className="text-violet-500">Sentiment</span> Analyser</h3>
             <div className="min-h-[600px] min-w-full my-10">
                 <div className="flex flex-col md:block ">
-                    <input type="text" id="youtube-input" name="youtube-input" onChange={handleChange} value={value} className="md:w-6/12 w-[350px] lg:h-8 border-2 rounded border-solid border-violet-500 mx-5 my-5 py-5 px-5" />
+                    <p>Enter an Youtube Video URL...</p>
+                    <input placeholder="https://www.youtube.com/watch?v=abc123Abc" type="text" id="youtube-input" name="youtube-input" onChange={handleChange} value={value} className="md:w-6/12 w-[350px] lg:h-8 border-2 rounded border-solid border-violet-500 mx-5 my-5 py-5 px-5" />
                     <button className="bg-violet-500 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded w-[150px] m-5" onClick={handleSubmit}>Submit</button>
                 </div>
                 <p>Your Result will appear here!</p>
