@@ -19,6 +19,11 @@ const Header = () => {
         },
         {
             _id: 3,
+            name: 'Text SA',
+            path: 'text-sentiment-analyser'
+        },
+        {
+            _id: 4,
             name: 'About',
             path: 'about'
         }
@@ -64,6 +69,8 @@ const Header = () => {
             navigate("/about")
         } else if (type === "youtube-comment-sentiment-analyser") {
             navigate("/youtube-comment-sentiment-analyser")
+        } else if (type === "text-sentiment-analyser") {
+            navigate("/text-sentiment-analyser")
         }
         else {
             navigate("/")

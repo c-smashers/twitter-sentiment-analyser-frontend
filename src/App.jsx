@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
 import YoutubeCommentAnalyser from './pages/youtubeCommentAnalyser/YoutubeCommentAnalyser'
+import TextSentimentAnalyser from './pages/textSentiment/TextSentimentAnalyser'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/youtube-comment-sentiment-analyser" element={<YoutubeCommentAnalyser />} />
+        <Route path="/text-sentiment-analyser" element={<TextSentimentAnalyser />} />
       </Routes>
       <Footer />
     </BrowserRouter>
