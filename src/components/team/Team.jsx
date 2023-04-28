@@ -8,7 +8,7 @@ const Team = () => {
             id: 1,
             name: 'Anupam Sinha',
             role: 'Developer',
-            description: 'dsjdjkdnkjnvkfnvkjfjjnvknfkfnk',
+            description: 'Still writing...',
             githublink: 'htpps://github.com/ANU4247',
             linkedinlink: 'htpps://github.com/ANU4247'
         },
@@ -16,7 +16,7 @@ const Team = () => {
             id: 2,
             name: 'Hemant Kumar Mandal',
             role: 'Developer',
-            description: 'dsjdjkdnkjnvkfnvkjfjjnvknfkfnk',
+            description: 'Still writing...',
             githublink: 'htpps://github.com/hemant1101',
             linkedinlink: 'htpps://github.com/ANU4247'
         },
@@ -24,7 +24,7 @@ const Team = () => {
             id: 3,
             name: 'Satyakant Sinha',
             role: 'Developer',
-            description: 'dsjdjkdnkjnvkfnvkjfjjnvknfkfnk',
+            description: 'Still writing...',
             githublink: 'htpps://github.com/ANU4247',
             linkedinlink: 'htpps://github.com/ANU4247'
         }
