@@ -15,6 +15,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/youtube-comment-sentiment-analyser" element={<YoutubeCommentAnalyser />} />
         <Route path="/text-sentiment-analyser" element={<TextSentimentAnalyser />} />
+        <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>

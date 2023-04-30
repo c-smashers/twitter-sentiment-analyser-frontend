@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { SlMenu } from 'react-icons/sl'
 import { VscChromeClose } from 'react-icons/vsc'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import './style.scss'
 import ContentWrapper from '../contentWrapper/ContentWrapper'
 
@@ -15,17 +15,17 @@ const Header = () => {
         {
             _id: 2,
             name: 'YouTube Comments SA',
-            path: 'youtube-comment-sentiment-analyser'
+            path: '/youtube-comment-sentiment-analyser'
         },
         {
             _id: 3,
             name: 'Text SA',
-            path: 'text-sentiment-analyser'
+            path: '/text-sentiment-analyser'
         },
         {
             _id: 4,
             name: 'About',
-            path: 'about'
+            path: '/about'
         }
     ]
 
@@ -65,16 +65,6 @@ const Header = () => {
     }
 
     const navigationHandler = (type) => {
-        if (type === "about") {
-            navigate("/about")
-        } else if (type === "youtube-comment-sentiment-analyser") {
-            navigate("/youtube-comment-sentiment-analyser")
-        } else if (type === "text-sentiment-analyser") {
-            navigate("/text-sentiment-analyser")
-        }
-        else {
-            navigate("/")
-        }
         setMobileMenu(false)
     }
 
@@ -87,7 +77,7 @@ const Header = () => {
                 </div>
                 <ul className="menuItems">
                     {menuItemList.map((Item) => {
-                        return <li key={Item._id} className="menuItem" onClick={() => navigationHandler(Item.path)}>{Item.name}</li>
+                        return <li key={Item._id} className="menuItem" onClick={() => navigationHandler()}><Link to={Item.path}>{Item.name}</Link></li>
                     })}
                 </ul>
 
