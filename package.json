@@ -1,7 +1,7 @@
 {
   "name": "twitter-sentiment-analyser-frontend",
-  "homepage": "/twitter-sentiment-analyser-frontend/#",
-  "private": false,
+  "homepage": "https://c-smashers.github.io/twitter-sentiment-analyser-frontend/#",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
